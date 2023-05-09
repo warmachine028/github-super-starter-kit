@@ -18,7 +18,8 @@ jobs:
           ref: ${{ github.ref }} # The branch you want to commit to
       
       - name: Give Permissions
-        run: git update-index --chmod=+x ./.github/workflows/updateDate.sh
+        run: | # if this line gives error, then run it locally
+          git update-index --chmod=+x ./.github/workflows/updateDate.sh
 
       - name: Update Files
         run: ./.github/workflows/updateDate.sh
