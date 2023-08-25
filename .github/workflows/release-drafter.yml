@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     # branches to consider in the event; optional, defaults to all
-    branches: [main]
+    branches:
+      - main
   # pull_request event is required only for autolabeler
   pull_request:
     # Only following types are handled by the action, but one can default to all as well
@@ -38,4 +39,4 @@ jobs:
         #   config-name: my-config.yml
         #   disable-autolabeler: true
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
