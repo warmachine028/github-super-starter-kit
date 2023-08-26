@@ -32,7 +32,12 @@ const labels = [
 	{
 		name: "good first issue",
 		description: "The issue is to encourage first time contributors",
-		color: "7f0799",
+		color: "7f0799"
+	},
+	{
+		name: "🤩 Up for the grab",
+		description: "The issue is ready to be assigned to a contributor",
+		color: "#6C049F"
 	},
 	{
 		name: "help wanted",
