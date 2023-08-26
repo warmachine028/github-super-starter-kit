@@ -15,7 +15,7 @@ const updateLabel = label => {
 
 const addNewLabel = label => {
 	document.querySelector(".js-new-label-name-input").value = label.name
-	document.querySelector(".js-new-label-description-input").value = label.description
+	document.querySelector(".js-new-label-description-input").value = label.description ? label.description : ''
 	document.querySelector(".js-new-label-color-input").value = `#${label.color}`
 	document.querySelector(".js-details-target ~ .btn-primary").disabled = false
 	document.querySelector(".js-details-target ~ .btn-primary").click()
@@ -37,7 +37,7 @@ const labels = [
 	{
 		name: "🤩 Up for the grab",
 		description: "The issue is ready to be assigned to a contributor",
-		color: "#6C049F"
+		color: "6C049F"
 	},
 	{
 		name: "help wanted",
