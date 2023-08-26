@@ -31,6 +31,7 @@ const addLabel = label => {
 const labels = [
 	{
 		name: "good first issue",
+		description: "The issue is to encourage first time contributors",
 		color: "7f0799",
 	},
 	{
@@ -159,10 +160,12 @@ const labels = [
 	},
 	{
 		name: "hacktoberfest",
+		description: "This issue/pull request is specially marked for hacktoberfest",
 		color: "eb06b0",
 	},
 	{
 		name: "hacktoberfest-accepted",
+		description: "The contribution was accepted for hactoberfest",
 		color: "0f8b16",
 	},
 ]
