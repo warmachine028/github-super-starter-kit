@@ -5,7 +5,7 @@ const updateLabel = label => {
 			flag = true
 			element.querySelector(".js-edit-label").click()
 			element.querySelector(".js-new-label-name-input").value = label.name
-			element.querySelector(".js-new-label-description-input").value = label.description
+			element.querySelector(".js-new-label-description-input").value = label.description ? label.description : ''
 			element.querySelector(".js-new-label-color-input").value = `#${label.color}`
 			element.querySelector(".js-edit-label-cancel ~ .btn-primary").click()
 		}
