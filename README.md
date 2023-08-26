@@ -27,6 +27,10 @@
 
 ## Introduction
 
+- Go to `.github/workflows` and for each workflow replace <project-name> with repo name.
+- Press `ctrl+F` and then replace all with repo-name.
+- Go to `settings/actions` and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
+
 ![line]
 
 ## Developement
