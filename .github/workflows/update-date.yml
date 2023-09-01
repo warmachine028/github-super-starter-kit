@@ -1,4 +1,4 @@
-name: Update Date
+name: 📆 Update Date
 
 on:
   workflow_dispatch:
