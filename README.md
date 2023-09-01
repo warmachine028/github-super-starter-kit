@@ -39,6 +39,8 @@
 
 ## Tech Stack Used
 
+[markdown badges]: https://github.com/Ileriayo/markdown-badges
+
 ![line]
 
 ## Preview
