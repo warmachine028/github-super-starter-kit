@@ -1,29 +1,27 @@
 name: 🙏 Welcome First Time Contributors
 
-on:
-  fork:
-  push:
-    branches: [main]
-  issues:
-    types: [opened]
-  pull_request_target:
-    types: [opened]
-    
+on: [pull_request_target, issues]
 jobs:
-  welcome:
+  greeting:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
-      - uses: actions/checkout@main
-      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: |
-            ### Hello @${{ github.actor }}, thank you for raising the issue.
-            
-            Thank you for raising an issue. Maintainer will soon investigate into the matter and get back to you as soon as possible.  
-            Meanwhile feel free to support star the repo and share it with your friends. 🤓 🚀
-            
-          pr-message: |
-            ### Hello @${{ github.actor }}, thank you for raising a pull request.
-            
-            Please make sure you have filled the PR template properly and followed our contributing guidelines.
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: |
+          # Congratulations 🎉 @${{ github.actor }}, on creating your first issue in <project-name>
+          
+          - Meanwhile if your liked this project, please make sure to star this 🌟🌟🌟.
+          - You can see my other projects too, which you might feel appealing.
+          - You also follow me for making more future contributions in open-source projects.
+
+        pr-message: |
+          # Congratulations 🎉 @${{ github.actor }}, on your first contribution in <project-name>
+          
+          - Make sure to star this project, if you liked contributing to it. 🌟🌟🌟
+          - You can raise another new issue, if you find something is worth enhancement or needs a fix.
+          - You can see my other projects too, which you might feel appealing.
+          - You also follow me for making more future contributions in open-source projects.
