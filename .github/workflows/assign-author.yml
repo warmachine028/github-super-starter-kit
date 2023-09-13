@@ -1,4 +1,4 @@
-name: 👨‍💻 Assign Authors to PRs
+name: 👨‍💻 Assign Author
 
 on:
   pull_request_target:
