@@ -1,4 +1,5 @@
 # Contributing to <project-name>
+**You must get assigned to an issue, by either creating one/commenting in an unassigned issue, before creating a PR to this project.**
 
 First off, thanks for taking the time to contribute! ❤️
 
