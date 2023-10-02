@@ -1,5 +1,6 @@
 filters:
-  - label: "🟣 status: todo"
+  # For Features
+  - label: "enhancement"
     regexs:
       - /feat/i
     events: [pull_request]
@@ -10,48 +11,35 @@ filters:
       - /feat/i
     events: [pull_request]
     targets: [title]
-    
-  - label: "hacktoberfest-accepted"
-    regexs:
-      - /feat/i
-    events: [pull_request]
-    targets: [title]
 
-  
-  - label: "🟣 status: todo"
+  # For Docs
+  - label: "documentation"
     regexs:
       - /docs/i
     events: [pull_request]
     targets: [title]
 
-  - label: "📚 docs"
+  - label: "📄 aspect: text"
     regexs:
       - /docs/i
     events: [pull_request]
     targets: [title]
 
-  - label: "hacktoberfest-accepted"
-    regexs:
-      - /docs/i
-    events: [pull_request]
-    targets: [title]
-
-
-  
-  - label: "🟣 status: todo"
+  # For Bugs/Fixes
+  - label: "🛠 goal: fix"
     regexs:
       - /fix/i
+      - /bug/i
     events: [pull_request]
     targets: [title]
 
   - label: "🐞 bug"
     regexs:
       - /fix/i
+      - /bug/i
     events: [pull_request]
     targets: [title]
 
-  - label: "hacktoberfest-accepted"
-    regexs:
-      - /fix/i
+  - label: "hacktoberfest"
     events: [pull_request]
     targets: [title]
