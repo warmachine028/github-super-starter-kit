@@ -28,15 +28,13 @@ filters:
   # For Bugs/Fixes
   - label: "🛠 goal: fix"
     regexs:
-      - /fix/i
-      - /bug/i
+      - /(fix|bug)/i
     events: [pull_request]
     targets: [title]
 
   - label: "🐞 bug"
     regexs:
-      - /fix/i
-      - /bug/i
+      - /(fix|bug)/i
     events: [pull_request]
     targets: [title]
 
