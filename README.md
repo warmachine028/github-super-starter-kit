@@ -2,7 +2,7 @@
 
 <div align=center>
     <a href="https://github.com/warmachine028/github-super-starter-kit">
-        <img width="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNNMEw0gMcuUKOiT4V1EsyhDj9tv4St5BuRNfh7iV0BA&usqp=CAU&ec=48665699" alt="Github Super Starter Kit">
+        <img width="200" src="https://img.icons8.com/?size=1000&id=46874" alt="github-super-starter-kit">
     </a>
     <p style="font-family: roboto, calibri; font-size:12pt; font-style:italic"> A good one liner description here </p>
     <a src="https://github.com/warmachine028/github-super-starter-kit/forks">
@@ -27,7 +27,7 @@
 
 ## Introduction
 
-- Go to `.github/workflows` and for each workflow replace <project-name> with repo name.
+- Go to `.github/workflows` and for each workflow replace github-super-starter-kit with repo name.
 - Press `ctrl+F` and then replace all with repo-name.
 - Go to `settings/actions` and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
 
@@ -39,11 +39,19 @@
 
 ## Tech Stack Used
 
-[markdown badges]: https://github.com/Ileriayo/markdown-badges
+- Github
+- Markdown
+- Github Actions
+- Dependabot
+
+
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
 
 ![line]
 
 ## Preview
+
+![Snapshot](.github/preview.png)
 
 ![line]
 
@@ -67,7 +75,8 @@
 
 ## Thank you, everyone 💚
 
+[markdown badges]: https://github.com/Ileriayo/markdown-badges
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
-
 [License]: https://github.com/warmachine028/github-super-starter-kit/blob/main/LICENSE
+
 <!-- 19/07/24 -->
