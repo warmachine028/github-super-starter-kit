@@ -42,5 +42,5 @@ filters:
   - label: "hacktoberfest"
     regexs:
       - /.*/
-    events: [pull_request]
+    events: [ ] # events: [pull_request]
     targets: [title]
