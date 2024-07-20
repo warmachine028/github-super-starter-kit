@@ -32,7 +32,7 @@
 - To enable the workflows, go to `settings/actions` in your repo and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
 - To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
 - Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
-- Feel free to add your own sections in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](##table-of-contents)
+- Feel free to add your own sections in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
   
 ![line]
 
