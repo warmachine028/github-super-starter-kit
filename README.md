@@ -28,7 +28,7 @@
 ## Introduction
 
 - Go to [`.github/workflows`](.github/workflows) and for each workflow replace *github-super-starter-kit* with *repo-name*.
-- Press `ctrl+F` and `github-super-starter-kit` then replace all with your `repo-name`.
+- Press `ctrl+shift+F` and `github-super-starter-kit` then replace all with your `repo-name`.
 - To enable the workflows, go to `settings/actions` in your repo and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
 - To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
 - Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
@@ -47,13 +47,14 @@
 
 ## Tech Stack Used
 
-- Github
+- GitHub
 - Markdown
-- Github Actions
+- GitHub Actions
 - Dependabot
+- Yaml
+- Java Script
 
-
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white) ![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ![line]
 
