@@ -2,8 +2,6 @@ name: 🏡 Greet Contributor
 
 on:
   fork:
-  push:
-    branches: [main]
   issues:
     types: [opened]
   pull_request_target:
