@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: npm #! for javascript & typescript
     directory: "/"
     schedule:
       interval: daily
@@ -63,20 +63,23 @@ updates:
       - dependency-name: webpack-dev-middleware
         versions:
           - 4.1.0
-  - package-ecosystem: github-actions
+  - package-ecosystem: github-actions #! for github-actions
     directory: "/"
     schedule:
       interval: daily
       time: "21:00"
     open-pull-requests-limit: 10
-- package-ecosystem: maven
-  directory: "server"
-  schedule:
-    interval: daily
-  ignore:
-    # ignore Maven APIs/SPIs
-    - dependency-name: org.apache.maven:*
-- package-ecosystem: "github-actions"
-  directory: "server"
-  schedule:
-    interval: "daily"
+  - package-ecosystem: pip #! for python 
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: maven #! for java
+    directory: "server"
+    schedule:
+      interval: daily
+    ignore:
+      # ignore Maven APIs/SPIs
+      - dependency-name: org.apache.maven:*
+
+  
+ 
