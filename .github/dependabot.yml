@@ -5,7 +5,6 @@ updates:
     schedule:
       interval: daily
       time: "21:00"
-    open-pull-requests-limit: 10
     ignore:
       - dependency-name: stylelint-config-standard
         versions:
@@ -68,7 +67,6 @@ updates:
     schedule:
       interval: daily
       time: "21:00"
-    open-pull-requests-limit: 10
   - package-ecosystem: pip #! for python 
     directory: "/"
     schedule:
