@@ -73,13 +73,14 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+      time: "21:00"
   - package-ecosystem: maven #! for java
-    directory: "server"
+    directory: "/"
     schedule:
       interval: daily
+      time: "21:00"
     ignore:
-      # ignore Maven APIs/SPIs
-      - dependency-name: org.apache.maven:*
+      - dependency-name: org.apache.maven:* # ignore Maven APIs/SPIs
 
   
  
