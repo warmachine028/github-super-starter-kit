@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - if:
-          ${{ !contains(fromJson('[ "dependabot[bot]",
-          "dependabot-preview[bot]", "allcontributors"]'), github.actor) }}
-        uses: amannn/action-semantic-pull-request@v5 #version 4.6.0
+          ${{ !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "allcontributors"]'), github.actor) }}
+        uses: amannn/action-semantic-pull-request@v5
         id: lint_pr_title
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -21,9 +20,7 @@ jobs:
           subjectPatternError: |
             The subject "{subject}" found in the pull request title "{title}" should start with a lowercase character.
       - if:
-          ${{ always() && steps.lint_pr_title.outputs.error_message != null &&
-          !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]",
-          "allcontributors"]'), github.actor)}}
+          ${{ always() && steps.lint_pr_title.outputs.error_message != null && !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "allcontributors"]'), github.actor)}}
         name: Comment on PR
         uses: marocchino/sticky-pull-request-comment@v2.9.0
         with:
