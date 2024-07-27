@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: npm #! for javascript & typescript
+  - package-ecosystem: npm #! enable for javascript & typescript
     directory: "/"
     schedule:
       interval: daily
@@ -67,18 +67,18 @@ updates:
     schedule:
       interval: daily
       time: "21:00"
-  - package-ecosystem: pip #! for python 
-    directory: "/"
-    schedule:
-      interval: "daily"
-      time: "21:00"
-  - package-ecosystem: maven #! for java
-    directory: "/"
-    schedule:
-      interval: daily
-      time: "21:00"
-    ignore:
-      - dependency-name: org.apache.maven:* # ignore Maven APIs/SPIs
+  # - package-ecosystem: pip #! enable for python 
+  #   directory: "/"
+  #   schedule:
+  #     interval: "daily"
+  #     time: "21:00"
+  # - package-ecosystem: maven #! enable for java
+  #   directory: "/"
+  #   schedule:
+  #     interval: daily
+  #     time: "21:00"
+  #   ignore:
+  #     - dependency-name: org.apache.maven:* # ignore Maven APIs/SPIs
 
   
  
