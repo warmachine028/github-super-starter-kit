@@ -70,7 +70,7 @@
 
 <div align="center">
     <a href="https://github.com/warmachine028/github-super-starter-kit/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=warmachine028/github-super-starter-kit" alt="contributors" />
+        <img src="https://contrib.rocks/image?repo=warmachine028/github-super-starter-kit" alt="contributors"/>
     </a>
 </div>
 
