@@ -35,6 +35,11 @@ const labels = [
 		color: "7f0799"
 	},
 	{
+        	name: 'github_actions',
+        	description: 'The PR was opend by an automated github action',
+        	color: '12161c'
+    	},
+	{
 		name: "🤩 Up for the grab",
 		description: "The issue is ready to be assigned to a contributor",
 		color: "6C049F"
