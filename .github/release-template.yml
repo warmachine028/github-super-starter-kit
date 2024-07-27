@@ -7,11 +7,18 @@ categories:
       - 'enhancement'
   - title: '🐛 Bug Fixes'
     labels:
-      - 'fix'
       - 'bugfix'
-      - 'bug'
+      - '🐞 bug'
+      - '🛠 goal: fix'
+  - title: '📑 Documentation'
+    label: 
+      - 'documentation'
+      - '📄 aspect: text'
   - title: '🧰 Maintenance'
-    label: 'chore'
+    label: 
+      - 'chore'
+      - 'dependencies'
+      - 'github_actions'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
