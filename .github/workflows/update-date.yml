@@ -1,28 +1,26 @@
 name: 📆 Update Date
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
+    workflow_dispatch:
+    push:
+        branches: [main]
 
 jobs:
-  update-date:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      
-      - name: Give Permissions
-        run: git update-index --chmod=+x ./.github/update-date.sh # if this line gives error, then run it locally
+    update-date:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@main
 
-      - name: Update README
-        run: .github/update-date.sh
-        shell: bash
-      
-      - name: Push Changes
-        uses: ./.github/actions/push-changes
-        if: ${{ '<!-- `date "+%d/%m/%y"` -->' != '`tail -n 1 README.md`' }}
-        with:
-          message: 'feat: updated date in README.md'
+            - name: Give Permissions
+              run: git update-index --chmod=+x ./.github/update-date.sh # if this line gives error, then run it locally
 
-        
+            - name: Update README
+              run: .github/update-date.sh
+              shell: bash
+
+            - name: Push Changes
+              uses: ./.github/actions/push-changes
+              if: ${{ '<!-- `date "+%d/%m/%y"` -->' != '`tail -n 1 README.md`' }}
+              with:
+                  message: 'feat: updated date in README.md'
