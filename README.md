@@ -27,14 +27,16 @@
 
 ## Introduction
 
-- Go to [`.github/workflows`](.github/workflows) and for each workflow replace *github-super-starter-kit* with *repo-name*.
-- Press `ctrl+shift+F` and `github-super-starter-kit` then replace all with your `repo-name`.
-- To enable the workflows, go to `settings/actions` in your repo and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
-- To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
-- Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
-- Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml).
-- By default **Dependabot Alerts**  are enabled for all supported package-managers, only keep the ones relevant to your project.
-- Feel free to add your own sections in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
+1. Open the repo in any modern text-editor (VSCode,sublime,atom,IntelliJIDEA, PyCharm, etc).
+2. Press `ctrl+shift+F` and `github-super-starter-kit` then replace with your `repo-name` globally.
+3. To enable the workflows, go to `settings/actions` in your repo and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
+4. To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
+5. Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
+6. Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml)
+7. Configure the directories and cron jobs of the package managers _(eg. client/server)_ inside [.github/dependabot.yml](.github/dependabot.yml).
+8. By default **Dependabot Alerts** are enabled for npm only, the ones relevant to your project.
+9. Feel free to add your own sections _(eg. Configuring, Designs, Documents, Diagrams)_ in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
+10. You can find some free url-resourses below to find [markdown-badges], [icons] etc.
   
 ![line]
 
@@ -86,7 +88,8 @@
 
 ## Thank you, everyone 💚
 
-[markdown badges]: https://github.com/Ileriayo/markdown-badges
+[icons]: https://icons8.com/
+[markdown-badges]: https://github.com/Ileriayo/markdown-badges
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
 [License]: https://github.com/warmachine028/github-super-starter-kit/blob/main/LICENSE
 
