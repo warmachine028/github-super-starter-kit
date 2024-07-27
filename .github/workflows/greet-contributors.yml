@@ -16,7 +16,7 @@ jobs:
 
             - name: Comment on PR
               uses: EddieHubCommunity/gh-action-community/src/welcome@main
-              if: ${{ github.event.sender.login != github.repository_owner && !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", imgbot[bot], "allcontributors"]'), github.actor) }}
+              if: ${{ github.event.sender.login != github.repository_owner && !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "imgbot[bot]", "allcontributors" ]'), github.actor) }}
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   issue-message: |
