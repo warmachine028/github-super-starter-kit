@@ -32,7 +32,6 @@ body:
       label: Additional information
       description: Is there anything else we should know about this idea?
       value: |
-
         ## **Make sure to read the [CONTRIBUTING](https://github.com/warmachine028/github-super-starter-kit/blob/main/CONTRIBUTING.md) and [SETUP](https://github.com/warmachine028/github-super-starter-kit/tree/main/rules) docs before proceeding**
         ## Happy contributing. 💐
         Star my other Repositories [here](https://github.com/warmachine028)
