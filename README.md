@@ -28,15 +28,16 @@
 ## Introduction
 
 1. Open the repo in any modern text-editor (VSCode,sublime,atom,IntelliJIDEA, PyCharm, etc).
-2. Press `ctrl+shift+F` and `github-super-starter-kit` then replace with your `repo-name` globally.
-3. To enable the workflows, go to `settings/actions` in your repo and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
-4. To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
-5. Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
-6. Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml)
-7. Configure the directories and cron jobs of the package managers _(eg. client/server)_ inside [.github/dependabot.yml](.github/dependabot.yml).
-8. By default **Dependabot Alerts** are enabled for npm only, the ones relevant to your project.
-9. Feel free to add your own sections _(eg. Configuring, Designs, Documents, Diagrams)_ in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
-10. You can find some free url-resourses below to find [markdown-badges], [icons] etc.
+2. Press `ctrl+shift+F` and replace `github-super-starter-kit` with your `repo-name` globally.
+3. Press `ctrl+shift+F` and replace `pritamkundu771@gmail.com` with `yourEmail@email.com` globally.
+4. To enable the workflows, go to `settings/actions` in your repo and change "Workflow Permissions" from "Read repository contents ..." to "Read and Write ..."
+5. To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
+6. Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
+7. Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml)
+8. Configure the directories and cron jobs of the package managers _(eg. client/server)_ inside [.github/dependabot.yml](.github/dependabot.yml).
+9. By default **Dependabot Alerts** are enabled for npm only, the ones relevant to your project.
+10. Feel free to add your own sections _(eg. Configuring, Designs, Documents, Diagrams)_ in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
+11. You can find some free url-resourses below to find [markdown-badges], [icons] etc.
   
 ![line]
 
@@ -53,13 +54,13 @@
 
 - GitHub
 - Markdown
-- GitHub Actions
-- Dependabot
 - Prettier
+- Dependabot 
+- GitHub Actions
 - Yaml
-- Java Script
+- JavaScript
 
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-1A2B34?style=for-the-badge&logo=prettier&logoColor=pink) ![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-1A2B34?style=for-the-badge&logo=prettier&logoColor=pink) ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ![line]
 
