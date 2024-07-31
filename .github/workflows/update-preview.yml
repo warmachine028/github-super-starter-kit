@@ -8,8 +8,7 @@ on:
         # paths:
         #     - 'server/**'
 permissions:
-    # actions: write
-    contents: write
+    contents: read
 
 jobs:
     update-preview:
