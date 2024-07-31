@@ -8,11 +8,12 @@ on:
         # paths:
         #     - 'server/**'
 permissions:
+    actions: write
     contents: write
 
 jobs:
     update-preview:
-        runs-on: ubuntu-la  test
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
