@@ -24,7 +24,7 @@ jobs:
                 find . -type f -exec sed -i "s/github-super-starter-kit/${repo_name}/g; s/Github Super Starter Kit/${capitalized_repo_name}/g" {} +
 
             - name: Delete workflow file
-              run: rm -f .github/workflows/initialize.yml
+              run: gh workflow list
             
             - name: Push Changes
               uses: ./.github/actions/push-changes
