@@ -9,8 +9,8 @@ jobs:
         name: Lint PR title
         runs-on: ubuntu-latest
         steps:
-            - uses: amannn/action-semantic-pull-request@v5
-              name: Lint PR Title
+            - name: Lint PR Title
+              uses: amannn/action-semantic-pull-request@v5
               if: ${{ !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "imgbot[bot]", "allcontributors" ]'), github.actor) }}
               id: lint_pr_title
               env:
@@ -20,8 +20,8 @@ jobs:
                   subjectPatternError: |
                       The subject "{subject}" found in the pull request title "{title}" should start with a lowercase character.
             
-            - uses: marocchino/sticky-pull-request-comment@v2.9.0
-              name: Comment on PR
+            - name: Comment on PR
+              uses: marocchino/sticky-pull-request-comment@v2.9.0
               if: ${{ always() && steps.lint_pr_title.outputs.error_message != null && !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "imgbot[bot]", "allcontributors" ]'), github.actor)}}
               with:
                   header: pr-title-lint-error
@@ -34,8 +34,8 @@ jobs:
                        ${{ steps.lint_pr_title.outputs.error_message}}
                       ```
             
-            - uses: marocchino/sticky-pull-request-comment@v2.9.0
-              name: Delete comment
+            - name: Delete comment
+              uses: marocchino/sticky-pull-request-comment@v2.9.0
               if: ${{ steps.lint_pr_title.outputs.error_message == null }}
               with:
                   header: pr-title-lint-error

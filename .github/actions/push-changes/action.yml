@@ -6,7 +6,6 @@ inputs:
         required: true
     paths:
         description: File paths to add
-        required: false
         default: '.'
 runs:
     using: 'composite'

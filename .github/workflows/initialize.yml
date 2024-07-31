@@ -1,0 +1,32 @@
+name: 🚀 Initialize repository
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: write
+
+jobs:
+    initialize-repository:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.repository.is_template }}
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@main
+            
+            - name: Repace Template Repo name
+              run: |
+                repo_name=${{ github.repository }}
+                capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')
+                find . -type f -exec sed -i 's/github-super-starter-kit/${repo-name}/g; s/GitHub Super Starter Kit/${}/g' {capitalized_repo_name} +
+
+            - name: Delete workflow file
+              run: rm -f .github/workflows/initialize.yml
+            
+            - name: Push Changes
+              uses: ./.github/actions/push-changes
+              with:
+                  message: 'feat: initialised repository'
