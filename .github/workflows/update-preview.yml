@@ -8,7 +8,6 @@ on:
         # paths:
         #     - 'server/**'
 permissions:
-    actions: write
     contents: write
 
 jobs:
