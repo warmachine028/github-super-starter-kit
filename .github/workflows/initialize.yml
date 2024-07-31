@@ -21,7 +21,7 @@ jobs:
               run: |
                 repo_name=${{ github.repository }}
                 capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')
-                find . -type f -exec sed -i 's/github-super-starter-kit/${repo-name}/g; s/GitHub Super Starter Kit/${capitalized_repo_name}/g' {} +
+                find . -type f -exec sed -i "s/github-super-starter-kit/${repo_name}/g; s/Github Super Starter Kit/${capitalized_repo_name}/g" {} +
 
             - name: Delete workflow file
               run: rm -f .github/workflows/initialize.yml
