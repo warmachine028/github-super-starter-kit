@@ -7,8 +7,9 @@ on:
         # enable this for your repository if you want to trigger this workflow to observe specific file/directory changes
         # paths:
         #     - 'server/**'
+
 permissions:
-    contents: read
+    contents: write
 
 jobs:
     update-preview:
