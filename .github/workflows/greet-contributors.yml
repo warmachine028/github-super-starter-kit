@@ -18,7 +18,7 @@ jobs:
               uses: EddieHubCommunity/gh-action-community/src/welcome@main
               if: ${{ github.event.sender.login != github.repository_owner && !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "imgbot[bot]", "allcontributors" ]'), github.actor) }}
               with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  github-token: ${{ github.token }}
                   issue-message: |
                       ### Hello @${{ github.actor }}, thank you for raising the issue.
 

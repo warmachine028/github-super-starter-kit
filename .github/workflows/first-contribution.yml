@@ -12,7 +12,7 @@ jobs:
             - uses: actions/first-interaction@main
               if: ${{ github.event.sender.login != github.repository_owner && !contains(fromJson('[ "dependabot[bot]", "dependabot-preview[bot]", "imgbot[bot]", "allcontributors" ]'), github.actor) }}
               with:
-                  repo-token: ${{ secrets.GITHUB_TOKEN }}
+                  repo-token: ${{ github.token }}
                   issue-message: |
                       # Congratulations 🎉 @${{ github.actor }}, on creating your first issue in github-super-starter-kit
 

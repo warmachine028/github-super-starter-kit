@@ -17,6 +17,6 @@ jobs:
             - name: Run PR Labeler
               uses: hoho4190/issue-pr-labeler@v2.0.0
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ github.token }}
                   disable-bot: false
                   config-file-name: labels.yml
