@@ -5,8 +5,10 @@ on:
     push:
         branches: [main]
         # enable this for your repository if you want to trigger this workflow to observe specific file/directory changes
-        # paths: 
+        # paths:
         #     - 'server/**'
+permissions:
+    actions: write
 
 jobs:
     update-preview:
@@ -31,3 +33,5 @@ jobs:
               with:
                   message: 'feat: updated preview in README.md'
                   paths: './.github/preview.png'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

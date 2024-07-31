@@ -5,6 +5,9 @@ on:
     push:
         branches: [main]
 
+permissions:
+    actions: write
+
 jobs:
     update-date:
         runs-on: ubuntu-latest
@@ -24,3 +27,5 @@ jobs:
               if: ${{ '<!-- `date "+%d/%m/%y"` -->' != '`tail -n 1 README.md`' }}
               with:
                   message: 'feat: updated date in README.md'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
