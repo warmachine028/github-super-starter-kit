@@ -5,9 +5,7 @@ on:
     push:
         branches: [main]
 
-permissions:
-    contents: write
-    actions: write
+permissions: write-all
 
 jobs:
     initialize-repository:
@@ -33,5 +31,6 @@ jobs:
 
             - name: Disable workflow file
               env:
-                  GH_TOKEN: ${{ github.token }}
+                  GH_TOKEN: ${{ guthub.token }}
+                  # GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
               run: gh workflow disable initialize.yml
