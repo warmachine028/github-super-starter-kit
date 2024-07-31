@@ -34,5 +34,4 @@ jobs:
               with:
                   message: 'feat: updated preview in README.md'
                   paths: './.github/preview.png'
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              
