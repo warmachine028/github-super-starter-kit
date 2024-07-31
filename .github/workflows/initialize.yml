@@ -7,6 +7,7 @@ on:
 
 permissions:
     contents: write
+    actions: write
 
 jobs:
     initialize-repository:
@@ -16,8 +17,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@main
               with:
-                  token: ${{ secrets.WORKFLOW_TOKEN }}
-                  # token: ${{ github.token }}
+                  # token: ${{ secrets.WORKFLOW_TOKEN }}
+                  token: ${{ github.token }}
 
             - name: Repace Template Repo name
               run: |
