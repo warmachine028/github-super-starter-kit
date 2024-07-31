@@ -7,7 +7,6 @@ on:
             - main
 
 permissions:
-    actions: write
     contents: write
 
 jobs:
@@ -31,5 +30,4 @@ jobs:
               uses: ./.github/actions/push-changes
               with:
                   message: 'feat: initialised repository'
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              
