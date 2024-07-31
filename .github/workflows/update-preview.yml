@@ -9,10 +9,11 @@ on:
         #     - 'server/**'
 permissions:
     actions: write
+    contents: write
 
 jobs:
     update-preview:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-la  test
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
