@@ -5,7 +5,8 @@ on:
     push:
         branches: [main]
 
-permissions: write-all
+permissions: 
+    contents: write
 
 jobs:
     initialize-repository:
@@ -14,11 +15,6 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
-            #   with:
-            #       token: ${{ github.token }}
-
-            # - name: Checkout new Branch in github
-            #   run: git checkout -b initial-branch
 
             - name: Repace Template Repo name 
               run: |
@@ -26,12 +22,10 @@ jobs:
                   capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')
                   find . -type f -exec sed -i "s/github-super-starter-kit/${repo_name}/g; s/Github Super Starter Kit/${capitalized_repo_name}/g" {} +
 
+            - name: Delete the workflow
+              run: rm .github/workflows/initialize.yml
+
             - name: Push Changes
               uses: ./.github/actions/push-changes
               with:
                   message: 'feat: initialised repository'
-
-            - name: Disable workflow file
-              env:
-                  GH_TOKEN: ${{ github.token }}
-              run: gh workflow disable initialize.yml
