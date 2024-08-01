@@ -32,7 +32,12 @@ jobs:
 
             - name: Commit Changes
               run: git commit -m "feat:\ added repo name replacement"
-                 
+
+            - name: Config Repo
+              run: |   
+                  git config --global user.email "you@example.com"
+                  git config --global user.name "Your Name"
+            
             - name: Push changes
               run: git push origin initial-branch
               
