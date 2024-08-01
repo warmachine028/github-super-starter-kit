@@ -28,7 +28,9 @@ jobs:
                   find . -type f -exec sed -i "s/github-super-starter-kit/${repo_name}/g; s/Github Super Starter Kit/${capitalized_repo_name}/g" {} +
 
             - name: Push changes in new branch
-              run: git push origin initial-branch
+              run: |
+                git add .
+                git push origin initial-branch
             
             # - name: Push Changes
             #   uses: ./.github/actions/push-changes
