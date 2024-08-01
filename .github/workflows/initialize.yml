@@ -18,8 +18,8 @@ jobs:
                   # token: ${{ secrets.WORKFLOW_TOKEN }}
                   token: ${{ github.token }}
                 
-            # - name: Checkout new Branch in github
-            #   run: git checkout -b initial-branch
+            - name: Checkout new Branch in github
+              run: git checkout -b initial-branch
 
             - name: Repace Template Repo name and Push to new branch
               run: |
@@ -27,9 +27,16 @@ jobs:
                   repo_name=${{ github.event.repository.name }}
                   capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')
                   find . -type f -exec sed -i "s/github-super-starter-kit/${repo_name}/g; s/Github Super Starter Kit/${capitalized_repo_name}/g" {} +
-                  git add .
-                  git push origin initial-branch
-            
+
+            - name: Stage Changes
+              run: git add .
+
+            - name: Commit Changes
+              run: git commit -m "feat:\ added repo name replacement"
+                 
+            - name: Push changes
+              run: git push origin initial-branch
+              
             # - name: Push Changes
             #   uses: ./.github/actions/push-changes
             #   with:
