@@ -8,8 +8,11 @@ inputs:
         description: File paths to add
         default: '.'
 runs:
-    using: 'composite'
+    using: composite
     steps:
+        - name: Pull changes
+          run: git pull
+
         - name: Push changes
           uses: EndBug/add-and-commit@v9
           with:
