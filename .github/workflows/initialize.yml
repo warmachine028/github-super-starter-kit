@@ -30,13 +30,13 @@ jobs:
             - name: Stage Changes
               run: git add .
 
-            - name: Commit Changes
-              run: git commit -m "feat:\ added repo name replacement"
-
             - name: Config Repo
               run: |   
                   git config --global user.email "actions@github.com"
                   git config --global user.name "GitHub Actions"
+
+            - name: Commit Changes
+              run: git commit -m "feat:\ added repo name replacement"
             
             - name: Push changes
               run: git push origin initial-branch
