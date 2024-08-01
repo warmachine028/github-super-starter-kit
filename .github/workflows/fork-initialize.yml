@@ -1,32 +1,43 @@
 name: 🍴 Fork initialize
 
-on: fork
+on:
+    workflow_dispatch:
+    push:
+        branches: [main]
 
 permissions:
     contents: write
+    actions: write
 
 jobs:
-    initialize-repository:
+    fork-repository:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
 
-            - name: Repace Template Repo name
+            - name: Repace Email id
               run: |
                   author_name=${{ github.actor }}
                   owner_name=${{ github.event.repository.owner.name }}
-                  author_full_name=${{ github.event.forkee.full_name }}
-                  email_id=${{ github.event.repository.owner.email }}
+                  pusher_name=${{ github.event.pusher.name }}
+                  pusher_username=${{ github.event.pusher.username }}
+                  email_id=${{ github.event.pusher.email }}
+                  
 
-                  echo "${author_name}, ${owner_name}, ${author_full_name}, ${email_id}"
+                  echo "${author_name}, ${owner_name}, ${pusher_name}, ${email_id}"
+
 
                   # replace Name in README.md
-                  sed -i "s/Pritam/${author_name}/g" README.md
+                  sed -i "s/Pritam/${pusher_username}/g" README.md
 
-                  # replace Full name in LICENSE
-                  sed -i "s/Pritam Kundu/${author_full_name}/g" LICENSE
+                  # replace Name in LICENSE
+                  sed -i "s/Pritam Kundu/${pusher_name}/g" LICENSE
 
-                  # replace username in all_files 
-                  find . -type f -exec sed -i "s/warmachine028/${author_name}/g; s/pritamkundu771@gmail.com/${email_id}/g" {} +
+                  # # replace username in all_files 
+                  # find . -type f -exec sed -i "s/warmachine028/${author_name}/g; s/pritamkundu771@gmail.com/${email_id}/g" {} +
 
+            - name: Disable workflow file
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: gh workflow disable fork-initialize.yml
