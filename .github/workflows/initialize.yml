@@ -31,6 +31,7 @@ jobs:
 
             - name: Disable workflow file
               env:
-                  GH_TOKEN: ${{ guthub.token }}
+                  GH_TOKEN: ${{ gi
+                  thub.token }}
                   # GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
               run: gh workflow disable initialize.yml
