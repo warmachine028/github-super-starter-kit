@@ -28,14 +28,14 @@ jobs:
                   echo "author_name=${{ github.actor }}" >> $GITHUB_ENV
                   echo "author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com" >> $GITHUB_ENV
                   echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_ENV
-                  echo "original_repo_name=$(echo ${name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
 
-            - name: Store New Repository name
+            - name: Transform Repository names
               run: |
-                  echo "capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
+                  echo "original_repo_name=$(echo ${name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
+                  echo "capitalized_repo_name=$(echo ${{ github.event.repository.name }} | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
 
             - name: Repace Owner with Fork Owner
-              if: ${{ github.actor != env.username }}
+              if: github.actor != env.username
               run: |
                   find . -type f | xargs sed -i "s/${username}/${author_name}/g"
                   find . -type f | xargs sed -i "s/${email}/${author_email}/g"
