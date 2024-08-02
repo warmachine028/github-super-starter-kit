@@ -27,7 +27,7 @@
 
 ## Introduction
 
-1. Press `ctrl+shift+F` and replace `pritamkundu771@gmail.com` with `yourName@email.com` globally.
+1. Press `ctrl+shift+F` and replace `75939390+warmachine028@users.noreply.github.com` with `yourName@email.com` globally.
 2. To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
 3. Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
 4. Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml)
