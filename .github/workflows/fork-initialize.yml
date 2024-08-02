@@ -26,8 +26,8 @@ jobs:
 
             - name: Replace Configuration values
               run: |
-                  author.name=${{ github.actor }}
-                  author.email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+                  author_name=${{ github.actor }}
+                  author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
 
                   echo "${name}, ${owner.username}, ${owner.email}"
 
