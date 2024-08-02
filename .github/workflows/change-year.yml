@@ -1,0 +1,15 @@
+name: Change Year
+
+on: push
+
+# permissions:
+
+
+jobs:
+    change-year:
+        runs-on: ubuntu-latest
+    
+        steps:
+            - name: Disable a workflow
+              run: gh workflow disable change-year.yml 
+
