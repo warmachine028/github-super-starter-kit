@@ -27,9 +27,9 @@ jobs:
 
             - name: Replace Owner with Fork Owner
               run: |
-                  find . -type f | xargs sed -i "s/${username}/${author_name}/g" {} +
-                  find . -type f | xargs sed -i "s/${email}/${author_email}/g" {} +
-                  find . -type f | xargs sed -i "s/${name}/${author_name}/g" {} +
+                  find . -type f | xargs sed -i "s/${username}/${author_name}/g"
+                  find . -type f | xargs sed -i "s/${email}/${author_email}/g"
+                  find . -type f | xargs sed -i "s/${name}/${author_name}/g"
 
             - name: Disable workflow file
               env:
