@@ -47,9 +47,10 @@
 1. Go to **Actions** tab
 2. Enable workflows by Clicking on **green button** which says `I understand my workflows, go ahead and enable them`.
 3. Click on `🍴 Fork initialize` from Actions Sidebar.
-4. Click on `Run Workflow` in the **main** branch
+4. Click on `Run Workflow` in the **main** branch.
+5. 
+5. Go to Dependabots 
 
- 
 ![line]
 
 ## Developement
