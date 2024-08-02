@@ -12,6 +12,8 @@ permissions:
 jobs:
     fork-repository:
         runs-on: ubuntu-latest
+        # only perform if the repository is forked
+        if: ${{ github.event.repository.fork }}
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
@@ -24,23 +26,21 @@ jobs:
 
             - name: Replace Configuration values
               run: |
-                  author_name=${{ github.actor }}
-                  owner_name=${{ github.repository_owner }}
-                  email_id=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+                  author.name=${{ github.actor }}
+                  author.email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
 
-                  echo "${name}, ${owner}, ${email}"
-                  
-                  echo "${author_name}, ${owner_name}, ${email_id}"
+                  echo "${name}, ${owner.username}, ${owner.email}"
 
+                  echo "${author.name}, ${author.email}"
 
-                #   # replace Name in README.md
-                #   sed -i "s/$name/${pusher_username}/g" README.md
+              #   # replace Name in README.md
+              #   sed -i "s/$name/${pusher_username}/g" README.md
 
-                #   # replace Name in LICENSE
-                #   sed -i "s/Pritam Kundu/${pusher_name}/g" LICENSE
+              #   # replace Name in LICENSE
+              #   sed -i "s/Pritam Kundu/${pusher_name}/g" LICENSE
 
-                #   # # replace username in all_files 
-                #   # find . -type f -exec sed -i "s/warmachine028/${author_name}/g; s/${email}/${email_id}/g" {} +
+              #   # # replace username in all_files
+              #   # find . -type f -exec sed -i "s/warmachine028/${author_name}/g; s/${email}/${email_id}/g" {} +
 
             # - name: Disable workflow file
             #   env:
