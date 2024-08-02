@@ -42,4 +42,4 @@ jobs:
             - name: Push Changes
               uses: ./.github/actions/push-changes
               with:
-                  message: 'feat: fork initialised repository'
+                  message: 'feat: initialised repository'
