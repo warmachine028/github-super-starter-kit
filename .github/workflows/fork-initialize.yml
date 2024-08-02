@@ -10,7 +10,7 @@ permissions:
     actions: write
 
 jobs:
-    fork-repository:
+    initialize-on-fork:
         runs-on: ubuntu-latest
         # only perform if the repository is forked
         if: ${{ github.event.repository.fork }}
@@ -29,9 +29,9 @@ jobs:
                   author_name=${{ github.actor }}
                   author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
 
-                  echo "${name}, ${owner.username}, ${owner.email}"
+                  echo "${name}, ${username}, ${email}"
 
-                  echo "${author.name}, ${author.email}"
+                  echo "${author_name}, ${author_email}"
 
               #   # replace Name in README.md
               #   sed -i "s/$name/${pusher_username}/g" README.md
