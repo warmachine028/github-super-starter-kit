@@ -17,6 +17,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Getting Started](#getting-started)
 - [Developement](#developement)
 - [Tech Stack Used](#tech-stack-used)
 - [Preview](#preview)
@@ -27,15 +28,28 @@
 
 ## Introduction
 
-1. Press `ctrl+shift+F` and replace `75939390+warmachine028@users.noreply.github.com` with `yourName@email.com` globally.
-2. To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
-3. Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
-4. Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml)
-5. Configure the directories and cron jobs of the package managers _(eg. client/server)_ inside [.github/dependabot.yml](.github/dependabot.yml).
-6. By default **Dependabot Alerts** are enabled for npm only, the ones relevant to your project.
-7. Feel free to add your own sections _(eg. Configuring, Designs, Documents, Diagrams)_ in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
-8. You can find some free url-resourses below to find [markdown-badges], [icons] etc.
-  
+- A github template to automate basic initial workflows of a project.
+
+## Getting Started
+
+### Generating a repo from the template
+
+1. To configure automatic preview generation, replace [`url`](.github/take-snapshot.mjs#L5) with your hosted URL.
+2. Configure the [CodeQL Analysis](.github/workflows/codeql-analysis.yml) according to your tech stack/language.
+3. Configure [Dependabot](https://github.com/dependabot) alerts for package auto-updates and PRs for the package-manager of your choice inside [.github/dependabot.yml](.github/dependabot.yml)
+4. Configure the directories and cron jobs of the package managers _(eg. client/server)_ inside [.github/dependabot.yml](.github/dependabot.yml).
+5. By default **Dependabot Alerts** are enabled for npm only, the ones relevant to your project.
+6. Feel free to add your own sections _(eg. Configuring, Designs, Documents, Diagrams)_ in this readme according to your requirements, make sure to link those sections in the above [**Table of Contents**](#table-of-contents)
+7. You can find some free url-resourses below to find [markdown-badges], [icons] etc.
+
+### Forking this template
+
+1. Go to **Actions** tab
+2. Enable workflows by Clicking on **green button** which says `I understand my workflows, go ahead and enable them`.
+3. Click on `🍴 Fork initialize` from Actions Sidebar.
+4. Click on `Run Workflow` in the **main** branch
+
+ 
 ![line]
 
 ## Developement
@@ -81,7 +95,7 @@
 
 - See [LICENSE]
 
-**Pritam, 2024**
+**Pritam Kundu, 2024**
 
 ![line]
 

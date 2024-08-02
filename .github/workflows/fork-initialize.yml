@@ -4,7 +4,6 @@ on: workflow_dispatch
 
 permissions:
     contents: write
-    actions: write
 
 jobs:
     initialize-on-fork:
@@ -15,31 +14,29 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@main
 
-            - name: Read Repository Configuration
+            - name: Store Owner Configuration
               run: |
                   while IFS='=' read -r key value; do
                     echo "${key}=${value}" >> $GITHUB_ENV
                   done < .github/repository.config
 
-            - name: Replace Configuration values
+            - name: Store Fork Owner Configuration
               run: |
                   author_name=${{ github.actor }}
                   author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
 
-                  echo "${name}, ${username}, ${email}"
+            - name: Replace Owner with Fork Owner
+              run: |
+                  find . -type f | xargs sed -i "s/${username}/${author_name}/g" {} +
+                  find . -type f | xargs sed -i "s/${email}/${author_email}/g" {} +
+                  find . -type f | xargs sed -i "s/${name}/${author_name}/g" {} +
 
-                  echo "${author_name}, ${author_email}"
+            - name: Disable workflow file
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: gh workflow disable fork-initialize.yml
 
-              #   # replace Name in README.md
-              #   sed -i "s/$name/${pusher_username}/g" README.md
-
-              #   # replace Name in LICENSE
-              #   sed -i "s/Pritam Kundu/${pusher_name}/g" LICENSE
-
-              #   # # replace username in all_files
-              #   # find . -type f -exec sed -i "s/warmachine028/${author_name}/g; s/${email}/${email_id}/g" {} +
-
-            # - name: Disable workflow file
-            #   env:
-            #       GH_TOKEN: ${{ github.token }}
-            #   run: gh workflow disable fork-initialize.yml
+            - name: Push Changes
+              uses: ./.github/actions/push-changes
+              with:
+                  message: 'feat: fork initialised repository'

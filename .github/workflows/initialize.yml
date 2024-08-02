@@ -25,7 +25,7 @@ jobs:
             - name: Delete the workflow
               run: |
                 rm .github/workflows/initialize.yml 
-                rm .github/workflows/change-credentials.yml
+                rm .github/workflows/fork-initialize.yml
 
             - name: Push Changes
               uses: ./.github/actions/push-changes
