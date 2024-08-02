@@ -32,7 +32,7 @@ jobs:
 
             - name: Store New Repository name
               run: |
-                  run: echo "capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
+                  echo "capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
 
             - name: Repace Owner with Fork Owner
               if: ${{ github.actor != env.username }}
