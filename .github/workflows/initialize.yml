@@ -46,7 +46,7 @@ jobs:
 
             - name: Delete workflows
               run: |
-                  rm .github/workflows/initialize.yml
+                  # rm .github/workflows/initialize.yml
                   rm .github/workflows/fork-initialize.yml
 
             - name: Push Changes
