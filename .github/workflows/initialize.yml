@@ -5,27 +5,48 @@ on:
     push:
         branches: [main]
 
-permissions: 
+permissions:
     contents: write
 
 jobs:
     initialize-repository:
         runs-on: ubuntu-latest
+        # only perform if the repository was created from template
         if: ${{ !github.event.repository.is_template }}
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
 
-            - name: Repace Template Repo name 
+            - name: Store Owner Configuration
               run: |
-                  repo_name=${{ github.event.repository.name }}
-                  capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')
-                  find . -type f -exec sed -i "s/github-super-starter-kit/${repo_name}/g; s/Github Super Starter Kit/${capitalized_repo_name}/g" {} +
+                  while IFS='=' read -r key value; do
+                    echo "${key}=${value}" >> $GITHUB_ENV
+                  done < .github/repository.config
 
-            - name: Delete the workflow
+            - name: Store Fork Owner Configuration
               run: |
-                rm .github/workflows/initialize.yml 
-                rm .github/workflows/fork-initialize.yml
+                  echo "author_name=${{ github.actor }}" >> $GITHUB_ENV
+                  echo "author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com" >> $GITHUB_ENV
+                  echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_ENV
+                  echo "capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
+                  echo "original_repo_name=$(echo ${name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
+
+            - name: Repace Owner with Fork Owner
+              if: ${{ github.event.sender.login != github.repository_owner}}
+              run: |
+                  find . -type f | xargs sed -i "s/${username}/${author_name}/g"
+                  find . -type f | xargs sed -i "s/${email}/${author_email}/g"
+                  find . -type f | xargs sed -i "s/${name}/${author_name}/g"
+
+            - name: Replace Repository with Forked Repository
+              run: |
+                  find . -type f | xargs sed -i "s/${name}/${repo_name}/g"
+                  find . -type f | xargs sed -i "s/${original_repo_name}/${capitalized_repo_name}/g"
+
+            - name: Delete workflows
+              run: |
+                  rm .github/workflows/initialize.yml
+                  rm .github/workflows/fork-initialize.yml
 
             - name: Push Changes
               uses: ./.github/actions/push-changes

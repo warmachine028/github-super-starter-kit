@@ -1,4 +1,4 @@
-    updated on: 02th August 2024, Friday
+    updated on: 10th Jan 2024, Friday
 
 <div align=center>
     <a href="https://github.com/warmachine028/github-super-starter-kit">
@@ -44,12 +44,26 @@
 
 ### Forking this template
 
+- Run Initializer Action
+
 1. Go to **Actions** tab
 2. Enable workflows by Clicking on **green button** which says `I understand my workflows, go ahead and enable them`.
 3. Click on `🍴 Fork initialize` from Actions Sidebar.
 4. Click on `Run Workflow` in the **main** branch.
-5. 
-5. Go to Dependabots 
+5. Go to **Security** tab
+
+- Enable Dependabot Alerts
+
+1. Wait for the Run Initializer above step to complete.
+2. Go to [**Security**](https://github.com/warmachine028/github-super-starter-kit/security) tab.
+3. Click on **Security Overview**.
+4. Click on `Enable Dependabot alerts` button.
+
+- Enable Code Scanning Alerts
+
+1. Go to [Code security and analysis](https://github.com/SrijaAdhya12/github-super-starter-kit/settings/security_analysis#code_scanning_settings) section in settings.
+2. Enable subsequent **Graphs**, **updates** and **alerts**.
+3. Scroll down and go to **Tools** section set `CodeQL Analysis` to default.
 
 ![line]
 
@@ -107,4 +121,4 @@
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
 [License]: https://github.com/warmachine028/github-super-starter-kit/blob/main/LICENSE
 
-<!-- 02/08/24 -->
+<!-- 10/07/24 -->
