@@ -2,8 +2,8 @@ name: Change Year
 
 on: push
 
-# permissions:
-
+permissions:
+    actions: write
 
 jobs:
     change-year:
