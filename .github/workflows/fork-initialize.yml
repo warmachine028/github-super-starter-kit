@@ -23,8 +23,8 @@ jobs:
 
             - name: Store Fork Owner Configuration
               run: |
-                  author_name=${{ github.actor }}
-                  author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+                  echo "author_name=${{ github.actor }}" >> $GITHUB_ENV
+                  echo "author_email=${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com" >> $GITHUB_ENV
 
             - name: Replace Owner with Fork Owner
               run: |
