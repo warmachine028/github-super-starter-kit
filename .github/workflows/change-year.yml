@@ -1,6 +1,8 @@
 name: Change Year
 
-on: push
+on:
+    push:
+    workflow_dispatch:
 
 permissions:
     actions: write
@@ -8,14 +10,14 @@ permissions:
 jobs:
     change-year:
         runs-on: ubuntu-latest
-    
+
         steps:
             - name: Checkout repository
               uses: actions/checkout@main
 
             - name: Disable a workflow
               env:
-                GH_TOKEN: ${{ github.token }}
+                  GH_TOKEN: ${{ github.token }}
               run: |
-                gh workflow disable change-year.yml 
-                gh workflow enable codeql-analysis.yml 
+                  gh workflow disable change-year.yml 
+                  gh workflow enable codeql-analysis.yml
