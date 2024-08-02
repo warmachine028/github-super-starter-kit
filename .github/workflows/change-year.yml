@@ -16,5 +16,6 @@ jobs:
             - name: Disable a workflow
               env:
                 GH_TOKEN: ${{ github.token }}
-              run: gh workflow disable change-year.yml 
-
+              run: |
+                gh workflow disable change-year.yml 
+                gh workflow disable codeql-analysis.yml 
