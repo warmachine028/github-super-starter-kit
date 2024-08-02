@@ -30,9 +30,10 @@ jobs:
                   echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_ENV
                   echo "capitalized_repo_name=$(echo ${repo_name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
                   echo "original_repo_name=$(echo ${name//-/ } | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')" >> $GITHUB_ENV
+                  echo "${{ env.username }}"
 
             - name: Repace Owner with Fork Owner
-              if: ${{ github.event.sender.login == env.username }}
+              if: ${{ github.actor == env.username }}
               run: |
                   echo "${{github.event.sender.login}} ${{ env.username }}"
                   find . -type f | xargs sed -i "s/${username}/${author_name}/g"
