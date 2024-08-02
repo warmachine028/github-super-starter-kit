@@ -1,4 +1,4 @@
-    updated on: 02th August 2024, Friday
+    updated on: 02nd August 2024, Friday
 
 <div align=center>
     <a href="https://github.com/warmachine028/github-super-starter-kit">
