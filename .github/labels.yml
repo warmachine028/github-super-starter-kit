@@ -51,6 +51,7 @@ filters:
     # For Hacktoberfest only
     # - label: 'hacktoberfest'
     #   regexs:
+    #       - /^(?!Bump).*/
     #       - /.*/
     #   events: [pull_request]
     #   targets: [title]
