@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction) Test
+- [Introduction](#introduction)
 - [Getting Started](#getting-started)
 - [Developement](#developement)
 - [Tech Stack Used](#tech-stack-used)
