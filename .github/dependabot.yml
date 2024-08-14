@@ -1,9 +1,10 @@
 version: 2
 updates:
   - package-ecosystem: github-actions #! for github-actions
-    directory: "/"
+    directory: ".github"
     schedule:
-      interval: weekly
+      interval: daily
+      time: "21:00"
   # - package-ecosystem: npm #! enable for javascript & typescript
   #   directory: "/"
   #   schedule:
