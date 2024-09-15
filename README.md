@@ -92,7 +92,11 @@
 
 ## Preview
 
-![Snapshot](.github/preview.png)
+<picture align="center">
+    <source media="(prefers-color-scheme: light)" srcset=".github/preview-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset=".github/preview-dark.png">
+    <img src=".github/preview-light.png" alt="preview">
+</picture>
 
 ![line]
 
